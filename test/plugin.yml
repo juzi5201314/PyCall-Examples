@@ -1,0 +1,11 @@
+name: test
+main: main.py:Test
+version: "1.0.0"
+api: ["1.0.0"]
+author: Orange Soeur
+description: Use Python to write nukkit plugins
+
+commands:
+ testcmd:
+  description: "Test plugin command"
+  usage: "/testcmd"
