@@ -1,8 +1,6 @@
 # -*- coding: utf8 -*-
 
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+from utf8_gbk import utf8togbk, gbktoutf8
 
 from cn.nukkit.plugin import PluginBase
 from cn.nukkit.event.player import PlayerJoinEvent
@@ -17,6 +15,7 @@ import urllib, urllib2
 class Test(PluginBase):
 
     def onLoad(self):
+        print utf8togbk("因为windows控制台编码是ms936， 所以utf8字符需要转成gbk编码")
         pass
 
 
@@ -46,4 +45,5 @@ class Test(PluginBase):
 
 def onjoin(event):
     event.getPlayer().sendMessage("hello world")
+
 
