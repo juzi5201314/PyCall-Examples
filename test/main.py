@@ -23,6 +23,8 @@ class Test(PluginBase):
     def onEnable(self):
         self.getLogger().info("哭嘤嘤")
         EventListener.registerEventListener(onjoin, PlayerJoinEvent)
+        #PyFunction function, Class<? extends Event> event, EventPriority priority, boolean ignoreCancelled
+        #EventListener.registerEventListener(onjoin, PlayerJoinEvent, EventPriority.NORMAL, false)
 
     def onCommand(self, sender, command, label, args):
         if command.getName() == "testcmd":
